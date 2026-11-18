@@ -24,8 +24,11 @@ import twitter4j.conf.ConfigurationBuilder;
 @RestController
 public class RepositoryDetailsController {
 
-    @Autowired
+    
     private Environment env;
+    public RepositoryDetailsController(Environment env){
+        this.env=env;
+    }
 
     @RequestMapping("/")
     public String getRepos() throws IOException {
